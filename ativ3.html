@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>atividade 3</title>
+  <script>
+    // Definindo a classe Animal
+    class Animal {
+      constructor(nome) {
+        this.nome = nome;
+      }
+    }
+    
+    // Definindo a classe Cachorro que herda de Animal
+    class Cachorro extends Animal {
+      constructor(nome) {
+        super(nome);
+      }
+      
+      latir() {
+        var resultado = document.getElementById('resultado');
+        resultado.innerHTML = this.nome + ' está latindo: Woof woof!';
+      }
+    }
+    
+    // Criando um objeto cachorro1 da classe Cachorro e chamando o método latir
+    var cachorro1 = new Cachorro('Max');
+    cachorro1.latir();
+  </script>
+</head>
+<body>
+  <h1>Exemplo de Classe Cachorro</h1>
+  
+  <div id="resultado"></div>
+</body>
+</html>

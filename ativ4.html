@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>atividade 4</title>
+  <script>
+    // Definindo a classe ContaBancaria
+    class ContaBancaria {
+      constructor(titular, saldo, limite) {
+        this.titular = titular;
+        this.saldo = saldo;
+        this.limite = limite;
+      }
+      
+      depositar(valor) {
+        this.saldo += valor;
+      }
+    }
+    
+    // Criando um objeto conta1 e chamando o método depositar
+    var conta1 = new ContaBancaria('João', 1000, 500);
+    conta1.depositar(200);
+    
+    // Exibindo o saldo da conta no console
+    console.log('O saldo da conta é: R$ ' + conta1.saldo.toFixed(2));
+  </script>
+</head>
+<body>
+  <!-- O resultado será exibido no console do navegador -->
+</body>
+</html>

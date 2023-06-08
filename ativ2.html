@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>atividade 2</title>
+  <script>
+    // Definindo a classe Produto
+    class Produto {
+      constructor(nome, descricao, preco) {
+        this.nome = nome;
+        this.descricao = descricao;
+        this.preco = preco;
+      }
+      
+      aumentarPreco(valor) {
+        this.preco += valor;
+      }
+    }
+    
+    // Criando um objeto produto1 e chamando o método aumentarPreco
+    var produto1 = new Produto('Celular', 'Smartphone de última geração', 1000);
+    produto1.aumentarPreco(200);
+    
+    // Exibindo o preço do produto no console
+    console.log('O preço do produto é: R$ ' + produto1.preco.toFixed(2));
+  </script>
+</head>
+<body>
+  <!-- O resultado será exibido no console do navegador -->
+</body>
+</html>

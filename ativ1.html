@@ -1,0 +1,49 @@
+<!DOCTYPE html> 
+<html>
+<head>
+  <title>atividade 1</title>
+  <script>
+    // Definindo a classe Empregado
+    class Empregado {
+      constructor(nome, salario) {
+        this.nome = nome;
+        this.salario = salario;
+      }
+      
+      aumentarSalario() {
+        this.salario *= 1.1; // Aumentando em 10%
+      }
+    }
+    
+    // Função para criar um novo empregado e chamar o método para aumentar o salário
+    function criarEmpregado() {
+      // Obtendo os valores do formulário
+      var nome = document.getElementById('nome').value;
+      var salario = parseFloat(document.getElementById('salario').value);
+      
+      // Criando um novo objeto Empregado
+      var empregado = new Empregado(nome, salario);
+      
+      // Aumentando o salário em 10%
+      empregado.aumentarSalario();
+      
+      // Exibindo o novo valor do salário
+      var resultado = document.getElementById('resultado');
+      resultado.innerHTML = 'O novo valor do salário é: R$ ' + empregado.salario.toFixed(2);
+    }
+  </script>
+</head>
+<body>
+  <h1>Exemplo de Classe Empregado</h1>
+  
+  <label for="nome">Nome do Empregado:</label>
+  <input type="text" id="nome" />
+  
+  <label for="salario">Salário do Empregado:</label>
+  <input type="number" id="salario" />
+  
+  <button onclick="criarEmpregado()">Aumentar Salário</button>
+  
+  <div id="resultado"></div>
+</body>
+</html>
